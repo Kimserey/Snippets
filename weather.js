@@ -48,9 +48,9 @@ var weather = (function ($) {
                 return (Math.abs(curr - today) < Math.abs(prev - today) ? curr : prev);
             });
 
-            weather = forecasts.find(function (data) {
+            weather = forecasts.filter(function (data) {
                 return data.dt === closest_forecast_dt;
-            });
+            })[0];
 
             max = Math.round((weather.temp.max - 273.15) * 100) / 100;
             min = Math.round((weather.temp.min - 273.15) * 100) / 100;
@@ -60,8 +60,8 @@ var weather = (function ($) {
             }
 
             callback(null, {
-                maxCelcius : max,
-                minCelcius : min,
+                max : max,
+                min : min,
                 description : description,
                 imgUrl: img_url
             });
