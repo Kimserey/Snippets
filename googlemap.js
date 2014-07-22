@@ -10,6 +10,7 @@
 */
 
 /*global google*/
+"use strict";
 
 var googlemap = (function () {
     var initialize, add_marker, clear_marker,

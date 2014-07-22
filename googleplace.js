@@ -10,6 +10,7 @@
 */
 
 /*global google*/
+"use strict";
 
 var googleplace = (function () {
     var initialize, get_autocomplete, autocomplete, add_event_listener;
