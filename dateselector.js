@@ -54,7 +54,7 @@ var dateselector = (function ($) {
     setDate = function () {
         var date = jqueryMap.$date_input.val();
         if (!date) {
-            alert("No date selected");
+            return alert("No date selected");
         }
 
         jqueryMap.$selected_date_span.text(date);
