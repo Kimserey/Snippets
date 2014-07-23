@@ -22,7 +22,7 @@ var dateselector = (function ($) {
         hideAndShow();
 
         //init datepicker
-        jqueryMap.datepicker.datepicker();
+        jqueryMap.$datepicker.datepicker();
 
         //init jquery event handler
         jqueryMap.$date_btn.on("click", function() { hideAndShow(jqueryMap.$date_div); });
